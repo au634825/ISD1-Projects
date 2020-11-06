@@ -1,0 +1,8 @@
+"ændre i filer"
+gem løbende lokalt på PC
+
+-git commit
+-git pull
+-fix evt. konflikter
+-git push
+
