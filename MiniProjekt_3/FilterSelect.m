@@ -1,7 +1,7 @@
-function [Bout,Aout] = FilterSelect(gain,Fc, sel)
+function [Bout,Aout] = FilterSelect(Fs, gain,Fc, sel)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
-Fs  = 44100;    % Sampelfrekvens                            
+%Fs  = 44100;    % Sampelfrekvens                            
 %Fc = Fc/(Fs/2);
 K = tan(pi*Fc/Fs);
 V0 = 10^(gain/20);
@@ -48,7 +48,7 @@ B = [b0, b1, b2];
 A = [1, a1, a2];
 
 
-fvtool(B,A, 'FrequencyScale', 'log', 'Fs', Fs);
+
 
 Aout = A;
 Bout = B;
